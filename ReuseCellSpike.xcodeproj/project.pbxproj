@@ -21,6 +21,7 @@
 		DD3C4C4018EAC70B00D97DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4C2218EAC70B00D97DDD /* UIKit.framework */; };
 		DD3C4C4818EAC70B00D97DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4C4618EAC70B00D97DDD /* InfoPlist.strings */; };
 		DD3C4C4A18EAC70B00D97DDD /* ReuseCellSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4C4918EAC70B00D97DDD /* ReuseCellSpikeTests.m */; };
+		DD3C4C5518EAC74700D97DDD /* OZTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4C5418EAC74700D97DDD /* OZTextFieldCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		DD3C4C4518EAC70B00D97DDD /* ReuseCellSpikeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReuseCellSpikeTests-Info.plist"; sourceTree = "<group>"; };
 		DD3C4C4718EAC70B00D97DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD3C4C4918EAC70B00D97DDD /* ReuseCellSpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReuseCellSpikeTests.m; sourceTree = "<group>"; };
+		DD3C4C5318EAC74700D97DDD /* OZTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OZTextFieldCell.h; sourceTree = "<group>"; };
+		DD3C4C5418EAC74700D97DDD /* OZTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OZTextFieldCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				DD3C4C3018EAC70B00D97DDD /* Main.storyboard */,
 				DD3C4C3318EAC70B00D97DDD /* OZViewController.h */,
 				DD3C4C3418EAC70B00D97DDD /* OZViewController.m */,
+				DD3C4C5318EAC74700D97DDD /* OZTextFieldCell.h */,
+				DD3C4C5418EAC74700D97DDD /* OZTextFieldCell.m */,
 				DD3C4C3618EAC70B00D97DDD /* Images.xcassets */,
 				DD3C4C2518EAC70B00D97DDD /* Supporting Files */,
 			);
@@ -252,6 +257,7 @@
 			files = (
 				DD3C4C2B18EAC70B00D97DDD /* main.m in Sources */,
 				DD3C4C3518EAC70B00D97DDD /* OZViewController.m in Sources */,
+				DD3C4C5518EAC74700D97DDD /* OZTextFieldCell.m in Sources */,
 				DD3C4C2F18EAC70B00D97DDD /* OZAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,11 @@
 //
 
 #import "OZViewController.h"
+#import "OZTextFieldCell.h"
 
-@interface OZViewController ()
+@interface OZViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -20,10 +23,17 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    static NSString * const CellIdentifier = @"TextFieldCell";
+    OZTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
+    
+    return cell;
 }
 
 @end
