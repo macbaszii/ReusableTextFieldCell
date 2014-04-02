@@ -8,9 +8,11 @@
 
 #import "OZViewController.h"
 #import "OZTextFieldCell.h"
+#import "OZOrderMessage.h"
 
 @interface OZViewController () <UITableViewDataSource, UITableViewDelegate, OZTextFieldCellDelegate>
 
+@property (nonatomic, strong) NSArray *messages;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
@@ -34,6 +36,12 @@
                                                             forIndexPath:indexPath];
     cell.delegate = self;
     return cell;
+}
+
+#pragma mark - OZTextFieldCellDelegate
+
+- (void)userDidEndEditingOnField:(TextFieldOrder)order onCell:(OZTextFieldCell *)cell {
+    
 }
 
 @end

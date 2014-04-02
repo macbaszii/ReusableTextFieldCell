@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3A7F9F18EBCDBE007FAF7F /* OZOrderMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A7F9E18EBCDBE007FAF7F /* OZOrderMessage.m */; };
 		DD3C4C1F18EAC70B00D97DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4C1E18EAC70B00D97DDD /* Foundation.framework */; };
 		DD3C4C2118EAC70B00D97DDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4C2018EAC70B00D97DDD /* CoreGraphics.framework */; };
 		DD3C4C2318EAC70B00D97DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4C2218EAC70B00D97DDD /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD3A7F9D18EBCDBE007FAF7F /* OZOrderMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OZOrderMessage.h; sourceTree = "<group>"; };
+		DD3A7F9E18EBCDBE007FAF7F /* OZOrderMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OZOrderMessage.m; sourceTree = "<group>"; };
 		DD3C4C1B18EAC70B00D97DDD /* ReuseCellSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReuseCellSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3C4C1E18EAC70B00D97DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD3C4C2018EAC70B00D97DDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 				DD3C4C3418EAC70B00D97DDD /* OZViewController.m */,
 				DD3C4C5318EAC74700D97DDD /* OZTextFieldCell.h */,
 				DD3C4C5418EAC74700D97DDD /* OZTextFieldCell.m */,
+				DD3A7F9D18EBCDBE007FAF7F /* OZOrderMessage.h */,
+				DD3A7F9E18EBCDBE007FAF7F /* OZOrderMessage.m */,
 				DD3C4C3618EAC70B00D97DDD /* Images.xcassets */,
 				DD3C4C2518EAC70B00D97DDD /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3A7F9F18EBCDBE007FAF7F /* OZOrderMessage.m in Sources */,
 				DD3C4C2B18EAC70B00D97DDD /* main.m in Sources */,
 				DD3C4C3518EAC70B00D97DDD /* OZViewController.m in Sources */,
 				DD3C4C5518EAC74700D97DDD /* OZTextFieldCell.m in Sources */,
@@ -463,6 +469,7 @@
 				DD3C4C4F18EAC70B00D97DDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD3C4C5018EAC70B00D97DDD /* Build configuration list for PBXNativeTarget "ReuseCellSpikeTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +478,7 @@
 				DD3C4C5218EAC70B00D97DDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
