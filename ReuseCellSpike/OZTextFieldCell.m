@@ -7,6 +7,7 @@
 //
 
 #import "OZTextFieldCell.h"
+#import "OZOrderMessage.h"
 
 @interface OZTextFieldCell() <UITextFieldDelegate>
 
@@ -26,11 +27,22 @@
     self.secondField.tag = TextFieldSecond;
 }
 
+- (void)configureCellWithOrderMessage:(OZOrderMessage *)orderMessage {
+    self.firstField.text = orderMessage.firstMessage;
+    self.secondField.text = orderMessage.secondMessage;
+}
+
 #pragma mark - UITextFieldDelegate
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if ([self.delegate respondsToSelector:@selector(userDidBeginEditingField:onCell:)]) {
+        [self.delegate userDidBeginEditingField:textField onCell:self];
+    }
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    if ([self.delegate respondsToSelector:@selector(userDidEndEditingOnField:onCell:)]) {
-        [self.delegate userDidEndEditingOnField:textField.tag onCell:self];
+    if ([self.delegate respondsToSelector:@selector(userDidEndEditingField:onCell:)]) {
+        [self.delegate userDidEndEditingField:textField onCell:self];
     }
 }
 

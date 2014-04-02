@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class OZTextFieldCell;
+@class OZOrderMessage;
 
 typedef NS_ENUM(NSInteger, TextFieldOrder) {
     TextFieldFirst,
@@ -17,12 +18,14 @@ typedef NS_ENUM(NSInteger, TextFieldOrder) {
 
 @protocol OZTextFieldCellDelegate <NSObject>
 
-- (void)userDidEndEditingOnField:(TextFieldOrder)order onCell:(OZTextFieldCell *)cell;
-
+- (void)userDidBeginEditingField:(UITextField *)field onCell:(OZTextFieldCell *)cell;
+- (void)userDidEndEditingField:(UITextField *)field onCell:(OZTextFieldCell *)cell;
 @end
 
 @interface OZTextFieldCell : UITableViewCell
 
 @property (nonatomic, weak) id <OZTextFieldCellDelegate> delegate;
+
+- (void)configureCellWithOrderMessage:(OZOrderMessage *)orderMessage;
 
 @end
