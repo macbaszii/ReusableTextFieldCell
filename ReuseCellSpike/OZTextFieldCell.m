@@ -8,7 +8,7 @@
 
 #import "OZTextFieldCell.h"
 
-@interface OZTextFieldCell()
+@interface OZTextFieldCell() <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *firstField;
 @property (nonatomic, weak) IBOutlet UITextField *secondField;
@@ -21,6 +21,22 @@
 {
     self.firstField.placeholder = @"first";
     self.secondField.placeholder = @"second";
+    
+    self.firstField.tag = TextFieldFirst;
+    self.secondField.tag = TextFieldSecond;
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if ([self.delegate respondsToSelector:@selector(userDidEndEditingOnField:onCell:)]) {
+        [self.delegate userDidEndEditingOnField:textField.tag onCell:self];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

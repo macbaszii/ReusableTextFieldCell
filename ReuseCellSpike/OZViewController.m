@@ -9,7 +9,7 @@
 #import "OZViewController.h"
 #import "OZTextFieldCell.h"
 
-@interface OZViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface OZViewController () <UITableViewDataSource, UITableViewDelegate, OZTextFieldCellDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
@@ -32,7 +32,7 @@
     static NSString * const CellIdentifier = @"TextFieldCell";
     OZTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
-    
+    cell.delegate = self;
     return cell;
 }
 
